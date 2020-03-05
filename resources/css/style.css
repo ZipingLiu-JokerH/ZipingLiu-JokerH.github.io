@@ -1,0 +1,540 @@
+/*------------------------------------------*/
+/*Basic setup*/
+/*------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+html{
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.clearfix{zoom:1}
+.clearfix:after{
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0px;
+    visibility: hidden;
+}
+
+/*------------------------------------------*/
+/*Reresuable code*/
+/*------------------------------------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.box{
+    padding: 1%;
+}
+
+/*------ Icons ------*/
+ion-icon {
+    color: #e67e22;
+    font-size: 350%;
+    margin-bottom: 10px;
+}
+
+/*------ Links ------*/
+
+a{
+    text-decoration: none;
+}
+
+a:link, a:visited{
+    color: #e67e22;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 1px;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover, a:active{
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+
+/*------ Sections ------*/
+
+section{
+    padding: 80px 0px;
+}
+
+/*------ Headings ------*/
+
+h1, h2, h3{
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 240%;
+    word-spacing: 4px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2:after{
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: #e67e22;
+    content: "";
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+.box p{
+    line-height: 145%;
+    font-size: 90%;
+}
+
+/* ------ Paragraph ------ */
+
+.features-intro{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+/*------ Buttons ------ */
+
+.btn:link, .btn:visited,input[type=submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link, .btn-full:visited,input[type=submit]{
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: white;
+    margin-right: 20px;
+}
+
+.btn-ghost:link, .btn-ghost:visited{
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover, .btn:active, input[type=submit]:hover, input[type=submit]:active{
+    background-color: #cf6d17;
+}
+
+.btn-full:hover, .btn-full:active,input[type=submit]:hover, input[type=submit]:active{
+    border: 1px solid #cf6d17;
+}
+
+.btn-ghost:hover, .btn-ghost:active{
+    border: 1px solid #cf6d17;
+    color: white;
+}
+
+/*------------------------------------------*/
+/*Header*/
+/*------------------------------------------*/
+
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(img/hero.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.hero-text-box {
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.logo{
+    width: 100px;
+    height: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 60px;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link, .main-nav li a:visited{
+    padding:8px 0px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover, .main-nav li a:active{
+    border-bottom: 2px solid #e67e22;
+}
+
+/*------------------------------------------*/
+/*Features*/
+/*------------------------------------------*/
+.section-features .features-intro{
+    margin-bottom: 30px;
+}
+
+/*------------------------------------------*/
+/*Meals*/
+/*------------------------------------------*/
+
+.section-meals{
+    padding: 0px;
+}
+
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li{
+    display: block;
+    width: 25%;
+    float: left;
+}
+
+.meal-photo{
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.meal-photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/*------------------------------------------*/
+/*How it Works*/
+/*------------------------------------------*/
+.section-steps{
+    background-color: #f2f1f1;
+}
+
+.steps-box:first-child{
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child{
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.app-screen{
+    width: 40%;
+}
+
+.instuction-step{
+    margin-bottom: 50px;
+}
+.instuction-step:last-of-type{
+    margin-bottom: 80px;
+}
+.instuction-step p{
+    padding-top: 5px;
+}
+
+.instuction-number{
+    color:#e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+.btn-app:link, .btn-app:visited{
+    border: 0px;
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+/*------------------------------------------*/
+/*Cities*/
+/*------------------------------------------*/
+.city-photo{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature{
+    margin-bottom: 5px;
+}
+
+.city-feature ion-icon {
+    font-size: 100%;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    
+    line-height: 100%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/*------------------------------------------*/
+/*testimonials*/
+/*------------------------------------------*/
+.section-testimonials{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+}
+
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before{
+    content:"\201C";
+    font-size: 400%;
+    position: absolute;
+    top: -2px;
+    left: 0px;
+}
+
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img{
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/*------------------------------------------*/
+/*Sign up*/
+/*------------------------------------------*/
+.section-signup{
+    background-color: #f2f1f1;
+}
+
+.plan-box{
+    background-color: white;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 2px 2px 2px #e8e3e3;
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100%;
+    color: #e67e22;
+}
+
+.plan-price span{
+    font-size: 30%;
+    font-weight:300;
+}
+
+.plan-per-meal{
+    font-size: 80%;
+}
+
+.plan-box ul{
+    list-style: none;
+}
+
+.plan-box ul li{
+    padding: 5px 0px;
+}
+
+.plan-box ion-icon {
+    font-size: 100%;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    
+    line-height: 100%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.plan-box div:first-child{
+    background-color: #fafafa;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border-bottom: none;
+}
+
+
+/*------------------------------------------*/
+/*Contact form*/
+/*------------------------------------------*/
+.contact-from{
+    width: 60%;
+    margin: 0px auto;
+}
+
+input[type=text], input[type=email], select, textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea{
+    height:100px;
+}
+
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;
+}
+
+/*------------------------------------------*/
+/*Footer*/
+/*------------------------------------------*/
+footer{
+    background-color: #333;
+    padding: 30px;
+    font-size: 80%;
+}
+
+footer p{
+    color: #888;
+    text-align: center;
+    font-size: 80%;
+    margin-top: 20px;
+}
+footer p span{
+    display: none;
+}
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-links{
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li, .social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-links ion-icon{
+    color: #888;
+    font-size: 180%;
+    margin: 0px;
+}
+
+.social-links li:last-child{
+    margin-right: 0px;
+}
+
+.footer-nav li a:link, .footer-nav li a:visited, 
+.social-links li a:link, .social-links li a:visited{
+    text-decoration: none;
+    border: 0px;
+    color: #888;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover, .footer-nav li a:active {
+    color: #ddd;
+}
+ion-icon[name=logo-facebook],ion-icon[name=logo-twitter],
+ion-icon[name=logo-google],ion-icon[name=logo-instagram]{
+    transition: color 0.2s;
+}
+
+.social-links ion-icon[name=logo-facebook]:hover, .social-links ion-icon[name=logo-facebook]:active{
+    color: #3b5998;
+}
+.social-links ion-icon[name=logo-twitter]:hover, .social-links ion-icon[name=logo-twitter]:active{
+    color: #00aced;
+}
+.social-links ion-icon[name=logo-google]:hover, .social-links ion-icon[name=logo-google]:active{
+    color: #dd4b39;
+}
+.social-links ion-icon[name=logo-instagram]:hover, .social-links ion-icon[name=logo-instagram]:active{
+    color: #517fa4;
+}
