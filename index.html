@@ -4,6 +4,7 @@
         
         <meta name="viewport" content="width=device-width", initial-scale=1.0>
         
+        <link rel="stylesheet" href="vendors/css/animate.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
@@ -18,22 +19,24 @@
             <nav>
                 <div class="row">
                     <img src="resources/img/logo-white.png" alt="omnifood-logo" class="logo">
-                    <ul class="main-nav">
-                        <li><a href="#">Food delivery</a></li>
-                        <li><a href="#">How it works</a></li>
-                        <li><a href="#">Our cities</a></li>
-                        <li><a href="#">Sign up</a></li>
+                    <img src="resources/img/logo.png" alt="omnifood-logo" class="logo-black">
+                    <ul class="main-nav js--main-nav">
+                        <li><a href="#food-delivery">Food delivery</a></li>
+                        <li><a href="#how-it-works">How it works</a></li>
+                        <li><a href="#out-cities">Our cities</a></li>
+                        <li><a href="#sign-up">Sign up</a></li>
                     </ul>
+                    <a class="mobile-nav-icon js--mobile-nav-icon"><ion-icon name="list" id="mob-nav"></ion-icon></a>
                 </div>
             </nav>
             <div class="hero-text-box">
                 <h1>Goodbye junk food.<br>Hello super healthy meals.</h1>
-                <a class="btn btn-full" href="#">I’m hungry</a>
-                <a class="btn btn-ghost" href="#">Show me more</a>
+                <a class="btn btn-full js--scroll-to-plans" href="#">I’m hungry</a>
+                <a class="btn btn-ghost js--scroll-to-features" href="#">Show me more</a>
             </div>
         </header>
         
-        <section class="section-features">
+        <section class="section-features js--section-features" id="food-delivery">
             <div class="row">
                 <h2>Get food fast &mdash; not fast food.</h2>
                 <p class="features-intro">
@@ -41,7 +44,7 @@
                     No time for cooking. So let us take care of that, we’re really good at it, we promise!
                 </p>
             </div>
-            <div class="row">
+            <div class="row js--wp-1">
                 <div class="col span-1-of-4 box">
                     <ion-icon name="sync-outline"></ion-icon>
                     <h3>Up to 365 days/year</h3>
@@ -124,13 +127,13 @@
             </ul>
         </section>
         
-        <section class="section-steps">
+        <section class="section-steps" id="how-it-works">
             <div class="row">
                 <h2>How it works &mdash; Simple as 1, 2, 3</h2>
             </div>
             <div class="row">
                 <div class="col span-1-of-2 steps-box">
-                    <img src="resources/img/app-iPhone.png" alt="Omnifood app on iphone" class="app-screen">
+                    <img src="resources/img/app-iPhone.png" alt="Omnifood app on iphone" class="app-screen js--wp-2">
                 </div>
                 <div class="col span-1-of-2 steps-box">
                     <div class="instuction-step">
@@ -153,11 +156,11 @@
             </div>
         </section>
         
-        <section class="section-cities">
+        <section class="section-cities" id="out-cities">
             <div class="row">
                 <h2>We're currently in these cities</h2>
             </div>
-            <div class="row">
+            <div class="row js--wp-3">
                 <div class="col span-1-of-4 box">
                     <img class="city-photo" src="resources/img/lisbon-3.jpg" alt="lisbon">
                     <h3>Lisbon</h3>
@@ -254,12 +257,12 @@
             </div>
         </section>
         
-        <section class="section-signup">
+        <section class="section-signup js--section-plans" id="sign-up">
             <div class="row">
                 <h2>Start eating healthy today</h2>
             </div>
             <div class="row">
-                <div class="col span-1-of-3">
+                <div class="col span-1-of-3 js--wp-4">
                     <div class="plan-box">
                         <div>
                             <h3>Premium</h3>
@@ -412,7 +415,13 @@
                 </p>
             </div>
         </footer>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+        <script src="vendors/js/jquery.waypoints.min.js"></script>
+        <script src="resources/js/script.js"></script>
     </body>
-
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </html>
